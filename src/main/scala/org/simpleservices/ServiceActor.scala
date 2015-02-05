@@ -16,7 +16,9 @@ class ServiceActor extends Actor with ServiceRoutes {
   // this actor only runs our route, but you could add
   // other things here, like request stream processing
   // or timeout handling
-  def receive = runRoute(routes)
+  def receive = {
+    runRoute(routes)
+  }
 }
 
 
@@ -25,19 +27,9 @@ trait ServiceRoutes extends HttpService {
 
   val routes =
     path("") {
-//      getFromResourceDirectory("staticPages")
-      get {
-        respondWithMediaType(`text/html`) { // XML is marshalled to `text/xml` by default, so we simply override here
-          complete {
-              <html>
-                <body>
-                  <h1>SimpleServices.org is under construction.</h1>
-                  <h2>Please, check back soon.</h2>
-                  This site will become an open source location for useful (REST) services and dynamic web content.
-                </body>
-              </html>
-          }
-        }
-      }
+      getFromResource("index.html")
+    } ~
+    path(Segment) { resource =>
+      getFromResource(resource)
     }
 }

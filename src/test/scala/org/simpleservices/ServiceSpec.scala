@@ -13,12 +13,24 @@ class ServiceRoutesSpec
 
     "return a greeting for GET requests to the root path" in {
       Get() ~> routes ~> check {
-        responseAs[String] should include regex """services and dynamic web content"""
+        responseAs[String] should include regex """Simple Services"""
       }
     }
 
     "leave GET requests to other paths unhandled" in {
       Get("/unimplemented") ~> routes ~> check {
+        handled should be(false)
+      }
+    }
+
+    "handle GET requests of resources that exist under the resources directory" in {
+      Get("/ping") ~> routes ~> check {
+        responseAs[String] should include regex """pong"""
+      }
+    }
+
+    "leave GET requests of resources that DON'T exist under the resources directory" in {
+      Get("/foo") ~> routes ~> check {
         handled should be(false)
       }
     }

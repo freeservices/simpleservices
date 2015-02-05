@@ -4,7 +4,7 @@
 <head>
   <title>Simple Services</title>
   <meta name="description" content="free services"/>
-  <meta name="keywords" content="SAS, free services, software as a service, open source, free tools"/>
+  <meta name="keywords" content="SAS, free services, software as a service, open source, free tools"/>  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=9"/>
   <link rel="stylesheet" type="text/css" href="/style.css"/>
@@ -28,11 +28,11 @@
     <!--close welcome-->
     <div id="menu_items">
       <ul id="menu">
-        <li class="current"><a href="/index.html">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="/games.html">Games</a></li>
         <li><a href="/tools.html">Tools</a></li>
         <li><a href="/services.html">Services</a></li>
-        <li><a href="/contact.html">Contact</a></li>
+        <li class="current"><a href="/contact.html">Contact</a></li>
       </ul>
     </div>
     <!--close menu-->
@@ -82,7 +82,7 @@
         <div class="sidebar_item">
           <h2>Contact</h2>
 
-          <p>Email: <a href="mailto:simpleservices.org@gmail.com">simpleservices.org@gmail.com</a></p>
+          <p><a href="mailto:simpleservices.org@gmail.com">simpleservices.org@gmail.com</a></p>
         </div>
         <!--close sidebar_item-->
       </div>
@@ -104,18 +104,36 @@
 
     <div id="content">
       <div class="content_item">
-        <h1>Welcome To SimpleServices.org</h1>
+        <div class="form_settings">
+          <h2>Contact Us</h2>
 
-        <div class="content_container">
-          <p>This site is under construction.</p>
+          <p>Send me feedback, make suggestions, or request to contribute</p>
+
+          <p>&nbsp;</p>
+
+          <p><span>Name</span><input class="contact" type="text" name="your_name" value=""/></p>
+
+          <p><span>Email Address</span><input class="contact" type="text" name="your_email" value=""/></p>
+
+          <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_message"></textarea>
+          </p>
+
+          <p style="padding: 10px 0 10px 0;">Please enter the answer to this simple maths question (to prevent spam)</p>
+
+          <p><span>Maths Question: 9 + 3 = ?</span><input type="text" name="user_answer" class="contact"/><input
+                  type="hidden" name="answer" value="4d76fe9775"/></p>
+
+          <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted"
+                                                                 value="Send"/></p>
         </div>
-        <!--close content_container-->
+        <!--close form_settings-->
       </div>
       <!--close content_item-->
     </div>
     <!--close content-->
   </div>
   <!--close site_content-->
+
 </div>
 <!--close main-->
 

@@ -7,13 +7,19 @@
   <meta name="keywords" content="SAS, free services, software as a service, open source, free tools"/>
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-  <link rel="stylesheet" type="text/css" href="/style.css"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
   <script type="text/javascript" src="jquery.min.js"></script>
   <script type="text/javascript" src="jquery.easing.min.js"></script>
   <script type="text/javascript" src="jquery.nivo.slider.pack.js"></script>
   <script type="text/javascript">
     $(window).load(function () {
       $('#slider').nivoSlider();
+    });
+    $(window).load(function() {
+      var canvas = document.getElementById('my-first-canvas');
+      var context = canvas.getContext('2d');
+      context.strokeStyle = '#990000';
+      context.strokeRect(100,100,100,100);
     });
   </script>
 </head>
@@ -28,8 +34,8 @@
     <!--close welcome-->
     <div id="menu_items">
       <ul id="menu">
-        <li class="current"><a href="/index.html">Home</a></li>
-        <li><a href="/games.html">Games</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li class="current"><a href="/games.html">Games</a></li>
         <li><a href="/tools.html">Tools</a></li>
         <li><a href="/services.html">Services</a></li>
         <li><a href="/contact.html">Contact</a></li>
@@ -44,51 +50,26 @@
     <div class="sidebar_container">
       <div class="sidebar">
         <div class="sidebar_item">
-          <h2>About</h2>
+          <h2>Games</h2>
 
-          <p>Welcome to simpleservices.org, dedicated to providing free open source tools, games, and REST services.
-            <br/><br/>Please have a look around, give <a href="mailto:simpleservices.org@gmail.com">feedback</a>,
-            make suggestions, and/or make contributions to our sources:
-            <a href="https://github.com/freeservices/simpleservices.git"> Github sources</a>.
-          </p>
+          <p>No games yet</p>
         </div>
         <!--close sidebar_item-->
       </div>
       <!--close sidebar-->
-      <div class="sidebar">
-        <div class="sidebar_item">
-          <h2>Latest Update</h2>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div class="sidebar">
+      <div class="sidebar_item">
+        <h2>Contact</h2>
 
-          <h3>January 2015</h3>
-
-          <p>Finished initial site configuration.
-            <br/>Created our <a href="https://github.com/freeservices/simpleservices.git"> Github repository.</a>
-            <br/>The design of the site was lifted from the talented folks at: <a href="http://www.araynordesign.co.uk">ARaynorDesign</a>.
-          </p>
-        </div>
-        <!--close sidebar_item-->
+        <p><a href="mailto:simpleservices.org@gmail.com">simpleservices.org@gmail.com</a></p>
       </div>
-      <!--close sidebar-->
-      <div class="sidebar">
-        <div class="sidebar_item">
-          <h3>February 2015</h3>
-
-          <p>TBD</p>
-        </div>
-        <!--close sidebar_item-->
-      </div>
-      <!--close sidebar-->
-      <div class="sidebar">
-        <div class="sidebar_item">
-          <h2>Contact</h2>
-
-          <p>Email: <a href="mailto:simpleservices.org@gmail.com">simpleservices.org@gmail.com</a></p>
-        </div>
-        <!--close sidebar_item-->
-      </div>
-      <!--close sidebar-->
+      <!--close sidebar_item-->
     </div>
-    <!--close sidebar_container-->
+    <!--close sidebar-->
+  </div>
+  <!--close sidebar_container-->
 
     <div id="banner_image">
       <div id="slider-wrapper">
@@ -104,12 +85,11 @@
 
     <div id="content">
       <div class="content_item">
-        <h1>Welcome To SimpleServices.org</h1>
+        <h2>Games</h2>
 
-        <div class="content_container">
-          <p>This site is under construction.</p>
-        </div>
-        <!--close content_container-->
+        <canvas id="my-first-canvas" width="360" height="240">
+          <p>No canvas support?</p>
+        </canvas>
       </div>
       <!--close content_item-->
     </div>
