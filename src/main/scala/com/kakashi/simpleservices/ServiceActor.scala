@@ -1,4 +1,4 @@
-package org.simpleservices
+package org.kakashi.simpleservices
 
 import akka.actor.Actor
 import spray.routing._
@@ -30,6 +30,6 @@ trait ServiceRoutes extends HttpService {
       getFromResource("index.html")
     } ~
     path(Segment) { resource =>
-      getFromResource(resource)
+      getFromResource(s"${resource}.html")
     }
 }

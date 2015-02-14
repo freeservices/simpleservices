@@ -1,5 +1,6 @@
 package org.simpleservices
 
+import org.kakashi.simpleservices.ServiceRoutes
 import spray.http.StatusCodes._
 import spray.testkit.ScalatestRouteTest
 
@@ -7,6 +8,7 @@ class ServiceRoutesSpec
   extends AbstractServiceSpec
   with ScalatestRouteTest
   with ServiceRoutes {
+
   def actorRefFactory = system
   
   "ServiceRoutes" should {

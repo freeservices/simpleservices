@@ -1,4 +1,4 @@
-package org.simpleservices
+package org.kakashi.simpleservices
 
 import akka.actor.{ActorSystem, Props}
 import akka.io.IO
